@@ -16,21 +16,19 @@ from config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL
 
 
 # 提示词模板：让 LLM 输出结构化 JSON
-SYSTEM_PROMPT = """You are a historical illustration prompt generator. For each English sentence, output a concise visual scene description (50-80 words) in flat vector illustration style. MANDATORY RULES:
-1. EVERY prompt must describe the scene in flat vector illustration / graphic novel style
-2. Use keywords: flat illustration, clean bold lines, solid color blocks, minimal shading, stylized, graphic novel aesthetic
-3. Describe: (a) main subject & action, (b) foreground elements, (c) background setting
-4. Historical period-accurate clothing, architecture, weapons, vehicles, landscapes
-5. FORBIDDEN — NEVER describe or mention:
+SYSTEM_PROMPT = """You are a visual scene describer for AI image generation. For each English sentence, output a concise visual scene description (30-50 words) matching the given artistic style.
+
+RULES:
+1. Describe exactly what the scene should look like: (a) main subject & action, (b) foreground elements, (c) background setting
+2. Historical period-accurate clothing, architecture, weapons, vehicles, landscapes
+3. Use the specified artistic style in every prompt
+4. FORBIDDEN — NEVER describe or mention:
    - text, letters, words, numbers, typography, writing, captions, labels, signatures, watermarks, logos
    - flags, banners, national flags, party flags, military flags, any flag on poles or walls
-   - emblems, badges, insignia, coats of arms, crests, medals, rank patches, armbands, arm patches
-   - political symbols (swastika, hammer and sickle, rising sun, eagle emblem, star emblem, etc.)
-   - maps, charts, diagrams, cartography, atlas, globes, borders, territory outlines, compass roses
-   - portraits of leaders, propaganda posters, slogans, banners with text
-6. ONLY describe: scenery, landscapes, crowds, soldiers (without insignia), vehicles, buildings, weapons, nature, atmospheric scenes
-7. NEVER include: photorealistic, 3D render, realistic textures, complex shading, cinematic lighting, depth of field
-8. Keep character appearance consistent across prompts (same uniform, same face style)
+   - emblems, badges, insignia, coats of arms, crests, medals, rank patches, armbands
+   - political symbols (swastika, hammer and sickle, rising sun, eagle emblem, star emblem)
+   - maps, charts, diagrams, cartography, atlas, globes, borders, territory outlines, compass
+   - portraits of leaders, propaganda posters, slogans
 
 Output format (JSON only, no explanation):
 {"prompts": ["prompt1", "prompt2", ...]}"""
@@ -84,14 +82,11 @@ def _parse_json(text):
 
 def generate_image_prompts(sentences, style_hint=""):
     """
-    输入：英文句子列表
+    输入：英文句子列表 + 系列风格提示
     输出：图像提示词列表（与输入一一对应，缺失时用原句兜底）
     """
-    # 强制统一插画风格关键词
-    style_keywords = "flat vector illustration, clean bold lines, solid color blocks, minimal shading, graphic novel aesthetic"
-    # 系列风格提示（如沙漠主题、古代中国等）
-    style_extra = f"\nSeries style: {style_hint}" if style_hint else ""
-    user = f"""Style: {style_keywords}{style_extra}
+    style = style_hint if style_hint else "documentary illustration"
+    user = f"""Artistic style: {style}
 
 Sentences:
 {chr(10).join(f"{i+1}. {s}" for i, s in enumerate(sentences))}

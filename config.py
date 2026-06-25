@@ -17,12 +17,8 @@ SERIES_CONFIG = {
     "rommel": {
         "script_en": "data/rommel_en.txt",
         "script_zh": "data/rommel_zh.txt",
-        "style": "Hand-drawn battlefield sketch style, pencil and charcoal on aged paper, "
-                 "rough expressive gestural lines, war correspondent field journal illustration, "
-                 "quick ink wash and cross-hatching, monochromatic sepia tones with subtle grey washes, "
-                 "sparse gritty composition, vintage newspaper war sketch aesthetic, "
-                 "dust and sand texture, documentary feel, no clean vector lines, "
-                 "no realistic textures, no photorealism, no 3D rendering, no color, no smooth gradients",
+        "style": "Hand-drawn battlefield sketch, war correspondent field journal illustration, "
+                 "pencil and ink wash on aged paper, rough expressive lines, sepia tones, desert warfare theme",
         "neg": "nudity, bare skin, text, watermark, signature, logo, letters, words, "
                "typography, caption, label, writing, flag, banner, national flag, "
                "party flag, military flag, emblem, badge, insignia, coat of arms, "
@@ -41,10 +37,8 @@ SERIES_CONFIG = {
     "qin_empire": {
         "script_en": "data/qin_empire_en.txt",
         "script_zh": "data/qin_empire_zh.txt",
-        "style": "Simple flat Chinese illustration style, clean ink-like lines, "
-                 "minimalist composition, muted earth tones with warm accents, "
-                 "stylized ancient architecture and figures, paper texture background, "
-                 "graphic novel aesthetic, no realistic textures, no photorealism",
+        "style": "Flat Chinese ink illustration, clean brush-like lines, "
+                 "minimalist composition, muted earth tones, ancient architecture and figures, paper texture background",
         "neg": "nudity, modern elements, Western architecture, text, watermark, "
                "signature, logo, letters, words, typography, caption, label, "
                "writing, flag, banner, national flag, emblem, badge, insignia, "
@@ -59,10 +53,8 @@ SERIES_CONFIG = {
     "enlightenment": {
         "script_en": "data/enlightenment_en.txt",
         "script_zh": "data/enlightenment_zh.txt",
-        "style": "Simple flat vector illustration, clean bold lines, minimalist shading, "
-                 "solid color blocks, warm muted palette, stylized 18th century European scenes, "
-                 "sparse composition, graphic novel aesthetic, "
-                 "no realistic textures, no photorealism, no 3D rendering",
+        "style": "Flat vector illustration, clean bold lines, warm muted palette, "
+                 "stylized 18th century European scenes, sparse composition, graphic novel aesthetic",
         "neg": "nudity, modern elements, text, watermark, signature, logo, letters, "
                "words, typography, caption, label, writing, flag, banner, "
                "national flag, emblem, badge, insignia, coat of arms, crest, "
@@ -77,12 +69,8 @@ SERIES_CONFIG = {
     "european_theater": {
         "script_en": "data/european_theater_en.txt",
         "script_zh": "data/european_theater_zh.txt",
-        "style": "Hand-drawn battlefield sketch style, pencil and charcoal on aged paper, "
-                 "rough expressive gestural lines, war correspondent field journal illustration, "
-                 "quick ink wash and cross-hatching, monochromatic sepia tones with subtle grey washes, "
-                 "sparse gritty composition, vintage newspaper war sketch aesthetic, "
-                 "European theater ruins and rubble texture, documentary feel, no clean vector lines, "
-                 "no realistic textures, no photorealism, no 3D rendering, no color, no smooth gradients",
+        "style": "Hand-drawn battlefield sketch, pencil and ink wash on aged paper, "
+                 "rough expressive lines, sepia tones, European war ruins and rubble texture, documentary feel",
         "neg": "nudity, bare skin, text, watermark, signature, logo, letters, words, "
                "typography, caption, label, writing, flag, banner, national flag, "
                "party flag, military flag, emblem, badge, insignia, coat of arms, "
@@ -100,12 +88,8 @@ SERIES_CONFIG = {
     "pacific_theater": {
         "script_en": "data/pacific_theater_en.txt",
         "script_zh": "data/pacific_theater_zh.txt",
-        "style": "Hand-drawn battlefield sketch style, pencil and ink wash on aged paper, "
-                 "rough expressive gestural lines, war correspondent field journal illustration, "
-                 "quick cross-hatching and ink splatter, monochromatic sepia tones with subtle blue-grey washes, "
-                 "sparse gritty composition, vintage newspaper war sketch aesthetic, "
-                 "naval vessels and island landscapes in rough sketch form, documentary feel, no clean vector lines, "
-                 "no realistic textures, no photorealism, no 3D rendering, no color, no smooth gradients",
+        "style": "Hand-drawn battlefield sketch, pencil and ink wash on aged paper, "
+                 "rough expressive lines, sepia tones, naval vessels and island landscapes, documentary feel",
         "neg": "nudity, bare skin, text, watermark, signature, logo, letters, words, "
                "typography, caption, label, writing, flag, banner, national flag, "
                "party flag, military flag, emblem, badge, insignia, coat of arms, "
@@ -123,17 +107,9 @@ SERIES_CONFIG = {
     "chu_han": {
         "script_en": "data/chu_han_en.txt",
         "script_zh": "data/chu_han_zh.txt",
-        "style": "New Chinese Style Digital Gongbi heavy color painting, clean ink outline lines "
-                 "in traditional gongbi manner, flat color blocks with layered coloring, "
-                 "historical accurate Han dynasty clothing and armor, "
-                 "Qin-Han era imperial architecture and military camps, "
-                 "restrained color palette with muted earth tones, "
-                 "Tang dynasty official color system for hierarchy, "
-                 "stage-style narrative composition with clear figure hierarchy, "
-                 "Chinese historical comic strip aesthetic, "
-                 "digital ink brushwork imitating traditional brush strokes, "
-                 "negative space and minimalist backgrounds, "
-                 "no exaggerated colors, no anime style, no thick paint textures",
+        "style": "Chinese digital gongbi painting, Han dynasty historical scenes, "
+                 "ink outline with restrained earth tones, traditional costume and architecture, "
+                 "stage-style narrative composition, negative space backgrounds",
         "neg": "text, watermark, signature, logo, letters, words, typography, caption, "
                "label, writing, modern elements, anachronisms, bright neon colors, "
                "saturated anime colors, 3D render, photorealistic, realistic shading, "
@@ -146,18 +122,9 @@ SERIES_CONFIG = {
     "western_han": {
         "script_en": "data/western_han_en.txt",
         "script_zh": "data/western_han_zh.txt",
-        "style": "New Chinese Style Digital Gongbi heavy color painting, clean ink outline lines "
-                 "in traditional gongbi manner, flat color blocks with layered coloring, "
-                 "historical accurate Han dynasty clothing and armor, "
-                 "Western Han imperial architecture, Chang'an palaces and city walls, "
-                 "military camps, cavalry formations, desert and steppe landscapes, "
-                 "restrained color palette with muted earth tones, "
-                 "stage-style narrative composition with clear figure hierarchy, "
-                 "Chinese historical comic strip aesthetic, "
-                 "digital ink brushwork imitating traditional brush strokes, "
-                 "negative space and minimalist backgrounds, "
-                 "no exaggerated colors, no anime style, no thick paint textures, "
-                 "Han dynasty court scenes, Xiongnu nomadic camps, Silk Road caravans",
+        "style": "Chinese digital gongbi painting, Western Han dynasty historical scenes, "
+                 "ink outline with restrained earth tones, court scenes, cavalry formations, "
+                 "desert and steppe landscapes, Silk Road caravans",
         "neg": "text, watermark, signature, logo, letters, words, typography, caption, "
                "label, writing, modern elements, anachronisms, bright neon colors, "
                "saturated anime colors, 3D render, photorealistic, realistic shading, "
