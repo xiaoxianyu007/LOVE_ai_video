@@ -17,10 +17,12 @@ SERIES_CONFIG = {
     "rommel": {
         "script_en": "data/rommel_en.txt",
         "script_zh": "data/rommel_zh.txt",
-        "style": "Simple flat vector illustration style, clean bold lines, minimalist shading, "
-                 "solid color blocks, muted earth tones, desert warfare theme, "
-                 "stylized soldiers and tanks, sparse composition, graphic novel aesthetic, "
-                 "no realistic textures, no photorealism, no 3D rendering",
+        "style": "Hand-drawn battlefield sketch style, pencil and charcoal on aged paper, "
+                 "rough expressive gestural lines, war correspondent field journal illustration, "
+                 "quick ink wash and cross-hatching, monochromatic sepia tones with subtle grey washes, "
+                 "sparse gritty composition, vintage newspaper war sketch aesthetic, "
+                 "dust and sand texture, documentary feel, no clean vector lines, "
+                 "no realistic textures, no photorealism, no 3D rendering, no color, no smooth gradients",
         "neg": "nudity, bare skin, text, watermark, signature, logo, letters, words, "
                "typography, caption, label, writing, flag, banner, national flag, "
                "party flag, military flag, emblem, badge, insignia, coat of arms, "
@@ -28,10 +30,12 @@ SERIES_CONFIG = {
                "rising sun, political symbol, map, chart, diagram, cartography, "
                "atlas, globe, border, territory, compass, portrait of leader, "
                "propaganda poster, slogan, banner with text, "
+               "smooth vector art, clean digital lines, flat color blocks, "
                "modern elements, photorealistic, 3D render, realistic shading, "
                "detailed texture, complex background, hyperrealistic, "
                "cinematic lighting, Chinese people, Asian features, "
-               "Chinese architecture, low quality, blurry, deformed",
+               "Chinese architecture, low quality, blurry, deformed, "
+               "vibrant colors, saturated, polished illustration, anime, cartoon",
         "image_density": 1,
     },
     "qin_empire": {
@@ -73,10 +77,12 @@ SERIES_CONFIG = {
     "european_theater": {
         "script_en": "data/european_theater_en.txt",
         "script_zh": "data/european_theater_zh.txt",
-        "style": "Simple flat vector illustration, clean bold lines, minimalist shading, "
-                 "solid color blocks, muted earth tones, World War II European theater theme, "
-                 "stylized soldiers and tanks, sparse composition, graphic novel aesthetic, "
-                 "no realistic textures, no photorealism, no 3D rendering",
+        "style": "Hand-drawn battlefield sketch style, pencil and charcoal on aged paper, "
+                 "rough expressive gestural lines, war correspondent field journal illustration, "
+                 "quick ink wash and cross-hatching, monochromatic sepia tones with subtle grey washes, "
+                 "sparse gritty composition, vintage newspaper war sketch aesthetic, "
+                 "European theater ruins and rubble texture, documentary feel, no clean vector lines, "
+                 "no realistic textures, no photorealism, no 3D rendering, no color, no smooth gradients",
         "neg": "nudity, bare skin, text, watermark, signature, logo, letters, words, "
                "typography, caption, label, writing, flag, banner, national flag, "
                "party flag, military flag, emblem, badge, insignia, coat of arms, "
@@ -84,18 +90,22 @@ SERIES_CONFIG = {
                "political symbol, map, chart, diagram, cartography, "
                "atlas, globe, border, territory, compass, portrait of leader, "
                "propaganda poster, slogan, banner with text, "
+               "smooth vector art, clean digital lines, flat color blocks, "
                "modern elements, photorealistic, 3D render, realistic shading, "
                "detailed texture, complex background, hyperrealistic, "
-               "cinematic lighting, low quality, blurry, deformed",
+               "cinematic lighting, low quality, blurry, deformed, "
+               "vibrant colors, saturated, polished illustration, anime, cartoon",
         "image_density": 1,
     },
     "pacific_theater": {
         "script_en": "data/pacific_theater_en.txt",
         "script_zh": "data/pacific_theater_zh.txt",
-        "style": "Simple flat vector illustration, clean bold lines, minimalist shading, "
-                 "solid color blocks, muted earth and ocean tones, World War II Pacific theater theme, "
-                 "stylized naval vessels and island landscapes, sparse composition, graphic novel aesthetic, "
-                 "no realistic textures, no photorealism, no 3D rendering",
+        "style": "Hand-drawn battlefield sketch style, pencil and ink wash on aged paper, "
+                 "rough expressive gestural lines, war correspondent field journal illustration, "
+                 "quick cross-hatching and ink splatter, monochromatic sepia tones with subtle blue-grey washes, "
+                 "sparse gritty composition, vintage newspaper war sketch aesthetic, "
+                 "naval vessels and island landscapes in rough sketch form, documentary feel, no clean vector lines, "
+                 "no realistic textures, no photorealism, no 3D rendering, no color, no smooth gradients",
         "neg": "nudity, bare skin, text, watermark, signature, logo, letters, words, "
                "typography, caption, label, writing, flag, banner, national flag, "
                "party flag, military flag, emblem, badge, insignia, coat of arms, "
@@ -103,9 +113,11 @@ SERIES_CONFIG = {
                "political symbol, map, chart, diagram, cartography, "
                "atlas, globe, border, territory, compass, portrait of leader, "
                "propaganda poster, slogan, banner with text, "
+               "smooth vector art, clean digital lines, flat color blocks, "
                "modern elements, photorealistic, 3D render, realistic shading, "
                "detailed texture, complex background, hyperrealistic, "
-               "cinematic lighting, low quality, blurry, deformed",
+               "cinematic lighting, low quality, blurry, deformed, "
+               "vibrant colors, saturated, polished illustration, anime, cartoon",
         "image_density": 1,
     },
     "chu_han": {
@@ -200,11 +212,11 @@ EMO_DRAMATIC   = ("-4%",  "+10Hz")  # 高潮
 #  视差（2.5D · 纯CPU remap · cubic ease-out 快速动效）
 #  振幅参考：CapCut / AE 2.5D 模板，位移 15%~20% 画面宽
 # ═══════════════════════════════════════════════════════════
-PARALLAX_X  = 0.20   # 水平视差 20% 画面宽（强烈动效）
-PARALLAX_Y  = 0.14   # 垂直视差 14% 画面高
-ZOOM_AMP    = 0.16   # 推拉幅度 16%（明显推拉）
-DEPTH_GAMMA = 0.90   # 深度 gamma 拉伸（更强对比）
-DEPTH_AMP   = 0.65   # 近景最大位移占比（大幅提升）
+PARALLAX_X  = 0.06   # 水平视差 6% 画面宽（降低70%）
+PARALLAX_Y  = 0.04   # 垂直视差 4% 画面高（降低70%）
+ZOOM_AMP    = 0.05   # 推拉幅度 5%（降低70%）
+DEPTH_GAMMA = 0.90   # 深度 gamma 拉伸
+DEPTH_AMP   = 0.20   # 近景最大位移占比（降低70%）
 PERIOD      = 8.0    # 一周期秒数
 PHASE       = 1.0
 

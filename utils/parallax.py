@@ -48,17 +48,17 @@ def make_motion_map(t, depth_pow, w, h, motion):
 
     ramp = _cubic_ease_out(t)
 
-    # ── 7 种业界经典动效 ──
+    # ── 7 种业界经典动效（仅 sweep_left/right 降低70%，其余恢复原始值）──
     if motion == "sweep_right":
-        # Ken Burns 经典：水平右扫 + 缩放推入（速率翻倍）
-        sx, sy = ramp * 2.0, 0.0
-        zoom_eff = 1.0 + depth_pow * ramp * ZOOM_AMP * 1.2
+        # Ken Burns 经典：水平右扫 + 缩放推入（降低70%）
+        sx, sy = ramp * 0.6, 0.0
+        zoom_eff = 1.0 + depth_pow * ramp * ZOOM_AMP * 0.36
     elif motion == "sweep_left":
-        # 水平左扫 + 缩放推入（速率翻倍）
-        sx, sy = -ramp * 2.0, 0.0
-        zoom_eff = 1.0 + depth_pow * ramp * ZOOM_AMP * 1.2
+        # 水平左扫 + 缩放推入（降低70%）
+        sx, sy = -ramp * 0.6, 0.0
+        zoom_eff = 1.0 + depth_pow * ramp * ZOOM_AMP * 0.36
     elif motion == "push_in":
-        # 纯推进（Ken Burns 经典缩放，深度越近放大越多）
+        # 纯推进（Ken Burns 经典缩放）
         sx, sy = 0.0, 0.0
         zoom_eff = 1.0 + depth_pow * ramp * ZOOM_AMP * 1.2
     elif motion == "rise":
