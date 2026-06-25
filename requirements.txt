@@ -1,0 +1,6 @@
+numpy
+opencv-python
+edge-tts
+pillow
+httpx
+loguru
