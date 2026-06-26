@@ -113,7 +113,6 @@ def phase3_gen_images(prompts, series_cfg, series_name, skip=False, episode=1):
         logger.info(f"  缺失 {missing} 张图片，自动调用 ComfyUI 补生成...")
 
     check_comfyui()
-    style = series_cfg.get("style", "")
     neg = series_cfg.get("neg", config.SERIES_CONFIG["rommel"]["neg"])
     out_paths = []
     for i, prompt in enumerate(prompts):
@@ -122,7 +121,7 @@ def phase3_gen_images(prompts, series_cfg, series_name, skip=False, episode=1):
             out_paths.append(out)
             continue
         try:
-            full_prompt = f"{style}. {prompt}" if style else prompt
+            full_prompt = prompt  # LLM 已包含风格描述，不再重复拼接
             seed = episode * 1000 + i
             gen_image(full_prompt, neg, out, seed=seed)
             out_paths.append(out)
