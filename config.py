@@ -107,9 +107,9 @@ SERIES_CONFIG = {
     "chu_han": {
         "script_en": "data/chu_han_en.txt",
         "script_zh": "data/chu_han_zh.txt",
-        "style": "Chinese digital gongbi painting, Han dynasty historical scenes, "
-                 "ink outline with restrained earth tones, traditional costume and architecture, "
-                 "stage-style narrative composition, negative space backgrounds",
+        "style": "Chinese ink brush painting, ink wash on textured rice paper, "
+                 "Han dynasty historical scenes, traditional costume and architecture, "
+                 "warm earth tones, minimal composition, negative space",
         "neg": "text, watermark, signature, logo, letters, words, typography, caption, "
                "label, writing, modern elements, anachronisms, bright neon colors, "
                "saturated anime colors, 3D render, photorealistic, realistic shading, "
@@ -122,9 +122,9 @@ SERIES_CONFIG = {
     "western_han": {
         "script_en": "data/western_han_en.txt",
         "script_zh": "data/western_han_zh.txt",
-        "style": "Chinese digital gongbi painting, Western Han dynasty historical scenes, "
-                 "ink outline with restrained earth tones, court scenes, cavalry formations, "
-                 "desert and steppe landscapes, Silk Road caravans",
+        "style": "Chinese ink brush painting, ink wash on textured rice paper, "
+                 "Western Han dynasty historical scenes, court scenes, cavalry formations, "
+                 "desert and steppe landscapes, Silk Road caravans, warm earth tones",
         "neg": "text, watermark, signature, logo, letters, words, typography, caption, "
                "label, writing, modern elements, anachronisms, bright neon colors, "
                "saturated anime colors, 3D render, photorealistic, realistic shading, "

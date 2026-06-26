@@ -124,13 +124,13 @@ Generate {n} visually coherent image prompts. Output JSON only."""
     ], max_tokens=est_tokens)
 
     if raw is None:
-        logger.warning("LLM 不可用，全部用原句兜底")
-        return list(sentences)
+        logger.warning("LLM 不可用，用带风格前缀的原句兜底")
+        return [f"{style}, {s}" for s in sentences]
 
     parsed = _parse_json(raw)
     if not parsed or "prompts" not in parsed:
-        logger.warning(f"LLM 输出非 JSON: {raw[:200]}，全部用原句兜底")
-        return list(sentences)
+        logger.warning(f"LLM 输出非 JSON: {raw[:100]}，用带风格前缀的原句兜底")
+        return [f"{style}, {s}" for s in sentences]
 
     # 日志输出场景规划
     if "scene_plan" in parsed:
